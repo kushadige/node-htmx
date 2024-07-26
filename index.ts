@@ -2,12 +2,15 @@ import express from "express";
 import path from "path";
 import routes from "@/routes/*";
 
+import { checkHxRequest } from "./middlewares/*";
+
 // App config
 const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // Middlewares
+app.use(checkHxRequest);
 app.use("/", routes);
 
 // Listener
