@@ -29,3 +29,9 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+# Build files
+*.db
+*.sqlite
+*.db-journal
+*.sqlite-journal
